@@ -14,6 +14,7 @@
   home.packages = [
     # utils
     pkgs.bat
+    pkgs.btop
 
     # terminals/editors
     pkgs.neovim

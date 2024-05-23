@@ -26,11 +26,12 @@
   {
 
   nixosConfigurations = {
-    myNixos = nixpkgs.lib.nixosSystem {
+    desktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
 
       modules = [
       ./configuration.nix
+      ./hardware/desktop.nix
       ];
     };
   };
