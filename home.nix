@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./applications/alacritty.nix
-    ./applications/git.nix
+    ./apps/alacritty.nix
+    ./apps/git.nix
   ];
 
   # user info
