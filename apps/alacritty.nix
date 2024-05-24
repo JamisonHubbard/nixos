@@ -13,7 +13,15 @@
         blur = true;
         padding = {
           x = 15;
-	  y = 15;
+          y = 15;
+        };
+      };
+
+      font = {
+        size = 14.0;
+        normal = {
+          family = "FiraMono Nerd Font";
+          style = "Regular";
         };
       };
 
