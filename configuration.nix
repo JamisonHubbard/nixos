@@ -10,7 +10,6 @@ in {
       ./modules/audio.nix
       ./modules/bluetooth.nix
       ./modules/hyprland.nix
-      ./modules/packages.nix
       ./modules/shell.nix
 
       # modules that require additional params
@@ -21,6 +20,54 @@ in {
       inputs.home-manager.nixosModules.home-manager
     ];
 
+  # note: these packages are system-wide, for user packages see home.nix
+  environment.systemPackages = with pkgs; [
+    # utils
+    gcc
+    git
+    home-manager
+    htop
+    memtester
+    openssh
+    wget
+    zip
+
+    # terminals/editors/filesystem navigators
+    alacritty
+    dolphin
+    vim
+
+    # apps
+    firefox
+    discord
+    spotify
+
+    # bluetooth
+    blueman
+
+    # app launcher
+    rofi-wayland
+
+    # wallpaper
+    swww
+
+    # notifications
+    dunst
+    libnotify # dunst dependency
+
+    # audio
+    pavucontrol
+
+    # gaming
+    mangohud
+    protonup
+
+    # bar
+    waybar
+    networkmanagerapplet
+  ];
+
+  # allow proprietary software
   nixpkgs.config.allowUnfree = true;
 
   # home manager
