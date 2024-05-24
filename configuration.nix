@@ -10,7 +10,7 @@ in {
       ./modules/audio.nix
       ./modules/bluetooth.nix
       ./modules/hyprland.nix
-      ./modules/shell.nix
+      ./modules/starship.nix
 
       # modules that require additional params
       (import ./modules/networking.nix {inherit config pkgs username;})
@@ -30,6 +30,7 @@ in {
     lazygit
     memtester
     openssh
+    ripgrep
     wget
     zip
 
@@ -70,6 +71,14 @@ in {
 
   # allow proprietary software
   nixpkgs.config.allowUnfree = true;
+
+  # shell aliases
+  environment.shellAliases = {
+    ll = "ls -l";
+    la = "ls -al";
+    gs = "git status";
+    gb = "git branch";
+  };
 
   # keyboard shortcuts / media controls
   programs.light.enable = true;

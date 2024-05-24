@@ -5,13 +5,6 @@
 }: {
   imports = [];
 
-  environment.shellAliases = {
-    ll = "ls -l";
-    la = "ls -al";
-    gs = "git status";
-    gb = "git branch";
-  };
-
   programs.starship = {
     enable = true;
     settings = {
