@@ -12,16 +12,25 @@
   boot.extraModulePackages = [ ];
 
   # added these to consolidate hardware specific boot config
-  boot.loader.grub.enable = false;
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.useOSProber = true;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.systemd-boot.enable = false;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
-  # added these lines to support NVIDIA graphics card with hyprland 
+  # graphics configuration
   services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.modesetting.enable = true;
   boot.kernelParams = [
     "nvidia-drm.modeset=1"
     "nvidia-drm.fbdev=1"
   ];
+  hardware.nvidia.prime = {
+    sync.enable = true;
+    amdgpuBusId = "PCI:0:0:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/34663895-c618-4dec-8672-27c21fd819f9";

@@ -27,6 +27,7 @@
   # env variables
   home.sessionVariables = {
     EDITOR = "nvim";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/jamison/.steam/root/compatibilitytools.d";
   };
 
   # Let Home Manager install and manage itself.

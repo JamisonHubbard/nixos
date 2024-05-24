@@ -70,6 +70,23 @@ in {
   # allow proprietary software
   nixpkgs.config.allowUnfree = true;
 
+  # keyboard shortcuts / media controls
+  programs.light.enable = true;
+  services.actkbd = {
+    enable = true;
+    bindings = [];
+  };
+  sound.mediaKeys.enable = true;
+
+  # steam config
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    gamescopeSession.enable = true;
+  };
+  programs.gamemode.enable = true;
+
   # home manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; };

@@ -14,8 +14,11 @@
     NIXOS_OZONE_WL = "1"; # tell electron apps to use wayland
   };
 
-  hardware = {
-    opengl.enable = true;
+  # opengl
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 
   xdg.portal.enable = true;
