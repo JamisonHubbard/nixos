@@ -4,6 +4,7 @@
   imports = [
     ./apps/alacritty.nix
     ./apps/git.nix
+    ./apps/hyprland
   ];
 
   # user info

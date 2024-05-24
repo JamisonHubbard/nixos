@@ -27,6 +27,7 @@ in {
     git
     home-manager
     htop
+    lazygit
     memtester
     openssh
     wget
