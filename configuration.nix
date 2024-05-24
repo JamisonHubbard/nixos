@@ -7,14 +7,12 @@ in {
   imports =
     [ 
       # custom nix modules
-      ./modules/audio.nix
-      ./modules/bluetooth.nix
-      ./modules/hyprland.nix
-      ./modules/starship.nix
-
-      # modules that require additional params
-      (import ./modules/networking.nix {inherit config pkgs username;})
-      (import ./modules/users.nix {inherit config pkgs username;})
+      ./system/audio.nix
+      ./system/bluetooth.nix
+      ./system/hyprland.nix
+      ./system/starship.nix
+      (import ./system/networking.nix {inherit config pkgs username;})
+      (import ./system/users.nix {inherit config pkgs username;})
 
       # home manager
       inputs.home-manager.nixosModules.home-manager

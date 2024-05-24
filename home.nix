@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./apps/alacritty.nix
-    ./apps/git.nix
-    ./apps/hyprland
+    ./home/alacritty.nix
+    ./home/git.nix
+    ./home/hyprland.nix
   ];
 
   # user info

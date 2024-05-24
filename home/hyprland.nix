@@ -16,6 +16,15 @@
       # see https://wiki.hyprland.org/Configuring/Monitors/
       monitor = ",preferred,auto,auto";
 
+      # startup (custom)
+      "exec-once" = [
+        "waybar"
+        "swww init"
+        "swww img /home/jamison/wallpapers/current"
+        "nm-applet --indicator"
+        "dunst"
+      ];
+
       # my programs
       # see https://wiki.hypland.org/Configuring/Keywords/
       "$terminal" = "alacritty";
@@ -35,7 +44,7 @@
         gaps_in = 5;
         gaps_out = 20;
 
-        border_size = 2;
+        border_size = 3;
 
         "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         "col.inactive_border" = "rgba(595959aa)";
@@ -51,6 +60,7 @@
         rounding = 10;
 
         # change transparency of focused and unfocused windows
+        fullscreen_opacity = 1.0;
         active_opacity = 1.0;
         inactive_opacity = 0.95;
 
@@ -181,9 +191,6 @@
       # see https://wiki.hyprland.org/Configuring/Window-Rules/
       # see https://wiki.hyprland.org/Configuring/Workspace-Rules/
       windowrulev2 = "suppressevent maximize, class:.*";
-
-      # custom (I wrote this)
-      exec-once = "bash /home/jamison/nixos/apps/hyprland/start.sh";
     };
   };
 }
