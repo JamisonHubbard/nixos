@@ -25,6 +25,7 @@ in {
     git
     home-manager
     htop
+    killall
     lazygit
     memtester
     openssh
