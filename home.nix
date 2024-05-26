@@ -5,6 +5,7 @@
     ./home/alacritty.nix
     ./home/git.nix
     ./home/hyprland.nix
+    ./home/waybar
   ];
 
   # user info

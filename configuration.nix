@@ -29,6 +29,7 @@ in {
     lazygit
     memtester
     openssh
+    playerctl
     ripgrep
     wget
     zip
