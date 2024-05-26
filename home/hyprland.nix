@@ -18,12 +18,11 @@
 
       # startup (custom)
       "exec-once" = [
-        "killall .waybar-wrapped"
-        "waybar"
         "swww init"
         "swww img /home/jamison/wallpapers/current"
         "nm-applet --indicator"
         "dunst"
+        "/home/jamison/nixos/home/waybar/start.sh"
       ];
 
       # my programs
