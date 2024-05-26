@@ -28,6 +28,7 @@ in {
     killall
     lazygit
     memtester
+    neofetch
     openssh
     playerctl
     ripgrep
