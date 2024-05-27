@@ -1,17 +1,17 @@
-{ ... }: 
+{ ... }:
 let
-  custom = {
-    font = "RobotoMono Nerd Font";
-    fontsize = "12";
-    primary_accent = "#89b4fa";
-    secondary_accent = "#8be8ad";
-    tertiary_accent = "#f5f5f5";
-    primary_background_color = "rgba(17, 17, 27, 1)";
-    secondary_background_color = "#89b4fa";
-    tertiary_background_color = "#25253a";
-    background = "#11111B";
-    opacity = "0.85";
-    cursor = "Numix-Cursor";
+    custom = {
+        font = "RobotoMono Nerd Font";
+        fontsize = "12";
+        primary_accent = "#89b4fa";
+        secondary_accent = "#8be8ad";
+        tertiary_accent = "#f5f5f5";
+        primary_background_color = "rgba(17, 17, 27, 1)";
+        secondary_background_color = "#89b4fa";
+        tertiary_background_color = "#25253a";
+        background = "#11111B";
+        opacity = "0.85";
+        cursor = "Numix-Cursor";
     };
 in
 {

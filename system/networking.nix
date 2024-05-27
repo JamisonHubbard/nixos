@@ -1,24 +1,19 @@
 {
-  config,
-  pkgs,
   username,
   ...
 }: {
-  imports = [];
+    networking.networkmanager.enable = true;
+    networking.hostName = "${username}-nixos";
+    networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  networking.wireless.enable = false; # disable wpa_supplicant
-  networking.networkmanager.enable = true; # enable nmtui
-  networking.hostName = "${username}-nixos";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # firewall
+    networking.firewall.enable = false;
 
-  # firewall
-  networking.firewall.enable = false;
-
-  # ssh
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = true;
+    # ssh
+    services.openssh = {
+        enable = true;
+        settings = {
+            PasswordAuthentication = true;
+        };
     };
-  };
 }

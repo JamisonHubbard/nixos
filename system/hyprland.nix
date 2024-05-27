@@ -1,28 +1,26 @@
 {
   inputs,
-  config,
   pkgs,
   ...
 }: {
-  imports = [];
+    programs.hyprland = {
+        enable = true;
+        package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+        xwayland.enable = true;
+    };
 
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    xwayland.enable = true;
-  };
+    environment.sessionVariables = {
+        # tell electron apps to use wayland
+        NIXOS_OZONE_WL = "1";
+    };
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1"; # tell electron apps to use wayland
-  };
+    # opengl
+    hardware.opengl = {
+        enable = true;
+        driSupport = true;
+        driSupport32Bit = true;
+    };
 
-  # opengl
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 }
