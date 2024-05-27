@@ -30,10 +30,18 @@ in {
     memtester
     neofetch
     openssh
+    p7zip
     playerctl
     ripgrep
+    steam-run
+    unzip
     wget
     zip
+
+    # programming
+    cargo
+    python3
+    rustc
 
     # terminals/editors/filesystem navigators
     alacritty
@@ -72,6 +80,14 @@ in {
 
   # allow proprietary software
   nixpkgs.config.allowUnfree = true;
+
+  # for sunning non-nix executables
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      
+    ];
+  };
 
   # shell aliases
   environment.shellAliases = {

@@ -5,8 +5,8 @@
 }: 
 let
   custom = {
-    primary_accent = "#cba6f7";
-    secondary_accent = "#89b4fa";
+    primary_accent = "#89b4fa";
+    secondary_accent = "#8be8ad";
   };
 in {
   imports = [ ./style.nix ];
@@ -69,6 +69,7 @@ in {
         format = "{}";
         "return-type" = "json";
         exec = "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F";
+        max-length = 20;
       };
 
       "custom/playerctl#back" = {
@@ -163,13 +164,13 @@ in {
 
       disk = {
         interval = 30;
-        format = "  {percentage_used}% ";
+        format = "/   {percentage_used}% ";
         path = "/";
         "on-click" = "alacritty -e htop";
       };
 
       cpu = {
-        format = "/   {usage}%";
+        format = "  {usage}%";
         "on-click" = "alacritty -e htop";
       };
 
@@ -186,11 +187,12 @@ in {
       "group/hardware" = {
         orientation = "inherit";
         modules = [
-          "disk"
           "cpu"
           "temperature"
           "memory"
+          "disk"
         ];
+        drawer = {};
       };
 
       network = {

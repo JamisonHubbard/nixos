@@ -1,14 +1,10 @@
-{
-  config,
-  pkgs,
-  ...
-}: 
+{ ... }: 
 let
   custom = {
     font = "RobotoMono Nerd Font";
     fontsize = "12";
-    primary_accent = "#cba6f7";
-    secondary_accent = "#89b4fa";
+    primary_accent = "#89b4fa";
+    secondary_accent = "#8be8ad";
     tertiary_accent = "#f5f5f5";
     primary_background_color = "rgba(17, 17, 27, 1)";
     secondary_background_color = "#89b4fa";
