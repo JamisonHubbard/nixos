@@ -1,6 +1,5 @@
 {
     inputs,
-    config,
     pkgs,
     ...
 }:
@@ -13,8 +12,8 @@ in {
         ./system/bluetooth.nix
         ./system/hyprland.nix
         ./system/starship.nix
-        (import ./system/networking.nix {inherit config pkgs username;})
-        (import ./system/users.nix {inherit config pkgs username;})
+        (import ./system/networking.nix {inherit username;})
+        (import ./system/users.nix {inherit username;})
 
         # home manager
         inputs.home-manager.nixosModules.home-manager
@@ -46,6 +45,7 @@ in {
 
         # terminals/editors/filesystem navigators
         alacritty
+        cava
         dolphin
         vim
 
