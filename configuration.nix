@@ -21,6 +21,7 @@ in {
 
     environment.systemPackages = with pkgs; [
         # utils
+        feh
         gcc
         git
         home-manager
@@ -35,8 +36,12 @@ in {
         ripgrep
         steam-run
         unzip
+        vlc
         wget
         zip
+
+        # gaming
+        ckan
 
         # programming
         cargo
