@@ -42,6 +42,7 @@ in {
                 "cava#right"
             ];
             "modules-right" = [
+                "battery"
                 "bluetooth"
                 "network"
                 "group/hardware"
@@ -218,6 +219,25 @@ in {
                 interval = 5;
                 "on-click" = "blueman-manager";
                 "format-no-controller" = "";
+            };
+
+            # battery module
+            battery = {
+                bat = "BAT0";
+                interval = 60;
+                states = {
+                    warning = 30;
+                    critical = 10;
+                };
+                format = "{capacity}% {icon}";
+                "format-icons" = [
+                    ""
+                    ""
+                    "" 
+                    ""
+                    ""
+                ];
+                "max-length" = 25;
             };
 
             # tray module
