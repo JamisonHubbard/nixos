@@ -92,6 +92,15 @@ in {
                 on-click = "playerctl next";
             };
 
+            # volume module
+            pulseaudio = {
+                format = "{icon} {volume}%";
+                "format-bluetooth" = " {volume}%";
+                "format-icons" = {
+                    default = " ";
+                };
+            };
+
             # audio graph - left of center
             "cava#left" = {
                 framerate = 60;
@@ -213,7 +222,7 @@ in {
 
             # bluetooth module
             bluetooth = {
-                format = "  {num_connections}";
+                format = " {num_connections}";
                 "format-disabled" = " ";
                 "format-off" = " Off";
                 interval = 5;
@@ -223,7 +232,6 @@ in {
 
             # battery module
             battery = {
-                bat = "BAT0";
                 interval = 60;
                 states = {
                     warning = 30;
