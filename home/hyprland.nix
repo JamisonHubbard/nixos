@@ -24,6 +24,7 @@
             "$terminal" = "alacritty";
             "$fileManager" = "dolphin";
             "$menu" = "rofi -show drun -show-icons";
+            "$bar" = "waybar";
 
             # environment variables
             # see https://wiki.hypland.org/Configuring/Environment-variables/
@@ -143,7 +144,8 @@
                 "$mod, C, killactive,"
                 "$mod, M, exit,"
                 "$mod, V, togglefloating,"
-                "$mod, R, exec, $menu"
+                "$mod, D, exec, $menu"
+                "$mod, R, exec, $bar"
                 "$mod, P, pseudo,"
                 "$mod, J, togglesplit,"
 
