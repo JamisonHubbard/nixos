@@ -24,7 +24,7 @@
             "$terminal" = "alacritty";
             "$fileManager" = "dolphin";
             "$menu" = "rofi -show drun -show-icons";
-            "$bar" = "waybar";
+            "$bar" = "/home/jamison/nixos/home/hyprland/reload.sh";
 
             # environment variables
             # see https://wiki.hypland.org/Configuring/Environment-variables/

@@ -5,7 +5,7 @@
     imports = [
         ./home/alacritty.nix
         ./home/git.nix
-        ./home/hyprland.nix
+        ./home/hyprland
         ./home/waybar
     ];
 
