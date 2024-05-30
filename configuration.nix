@@ -35,6 +35,7 @@ in {
         playerctl
         ripgrep
         steam-run
+        unrar
         unzip
         vlc
         wget
@@ -52,11 +53,12 @@ in {
         alacritty
         cava
         dolphin
+        obsidian
         vim
 
         # apps
-        firefox
         discord
+        firefox
         spotify
 
         # bluetooth
