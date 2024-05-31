@@ -1,4 +1,7 @@
-{ ... }: {
+{
+    colors,
+    ...
+}: {
     programs.alacritty = {
         enable = true;
         settings = {
@@ -20,35 +23,35 @@
             };
 
             colors.primary = {
-                background = "#1e2030";
-                foreground = "#7f85a3";
+                background = "#${colors.blue_dark}";
+                foreground = "#${colors.grey_blue}";
             };
 
             colors.cursor = {
-                text = "#7f85a3";
-                cursor = "#808080";
+                text = "#${colors.grey_blue}";
+                cursor = "#${colors.grey}";
             };
 
             colors.normal = {
-                black = "#444a73";
-                red = "#ff5370";
-                green = "#4fd6be";
-                yellow = "#ffc777";
-                blue = "#3e68d7";
-                magenta = "#fc7b7b";
-                cyan = "#86e1fc";
-                white = "#d0d0d0";
+                black = "#${colors.blue_muted}";
+                red = "#${colors.pink}";
+                green = "#${colors.turquoise}";
+                yellow = "#${colors.yellow_muted}";
+                blue = "#${colors.blue}";
+                magenta = "#${colors.red_light}";
+                cyan = "#${colors.blue_light}";
+                white = "#${colors.grey_light}";
             };
 
             colors.bright = {
-                black = "#828bb8";
-                red = "#ff98a4";
-                green = "#4fd6be";
-                yellow = "#ffc777";
-                blue = "#82aaff";
-                magenta = "#ff966c";
-                cyan = "#b4f9f8";
-                white = "#5f8787";
+                black = "#${colors.grey_blue}";
+                red = "#${colors.pink_light}";
+                green = "#${colors.turquoise}";
+                yellow = "#${colors.yellow_muted}";
+                blue = "#${colors.blue_light_muted}";
+                magenta = "#${colors.orange_light}";
+                cyan = "#${colors.turquoise_light}";
+                white = "#${colors.grey_light}";
             };
         };
     };

@@ -1,11 +1,10 @@
-{ ... }:
-let
-    custom = {
-        primary_accent = "#89b4fa";
-        secondary_accent = "#8be8ad";
-    };
-in {
-    imports = [ ./style.nix ];
+{
+    colors,
+    ...
+}: {
+    imports = [
+        (import ./style.nix {inherit colors;})
+    ];
 
     nixpkgs.overlays = [
         (self: super: {
@@ -117,14 +116,14 @@ in {
                 waves = false;
                 input_delay = 2;
                 format-icons = [
-                    "<span foreground='${custom.primary_accent}'>▁</span>" 
-                    "<span foreground='${custom.primary_accent}'>▂</span>" 
-                    "<span foreground='${custom.primary_accent}'>▃</span>" 
-                    "<span foreground='${custom.primary_accent}'>▄</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▅</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▆</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▇</span>" 
-                    "<span foreground='${custom.secondary_accent}'>█</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▁</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▂</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▃</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▄</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▅</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▆</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▇</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>█</span>" 
                 ];
             };
 
@@ -144,14 +143,14 @@ in {
                 waves = false;
                 input_delay = 2;
                 format-icons = [
-                    "<span foreground='${custom.primary_accent}'>▁</span>" 
-                    "<span foreground='${custom.primary_accent}'>▂</span>" 
-                    "<span foreground='${custom.primary_accent}'>▃</span>" 
-                    "<span foreground='${custom.primary_accent}'>▄</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▅</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▆</span>" 
-                    "<span foreground='${custom.secondary_accent}'>▇</span>" 
-                    "<span foreground='${custom.secondary_accent}'>█</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▁</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▂</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▃</span>" 
+                    "<span foreground='#${colors.primary_accent}'>▄</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▅</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▆</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>▇</span>" 
+                    "<span foreground='#${colors.secondary_accent}'>█</span>" 
                 ];
             };
 

@@ -1,31 +1,18 @@
-{ ... }:
-let
-    custom = {
-        font = "RobotoMono Nerd Font";
-        fontsize = "12";
-        primary_accent = "#89b4fa";
-        secondary_accent = "#8be8ad";
-        tertiary_accent = "#f5f5f5";
-        primary_background_color = "rgba(17, 17, 27, 1)";
-        secondary_background_color = "#89b4fa";
-        tertiary_background_color = "#25253a";
-        background = "#11111B";
-        opacity = "0.85";
-        cursor = "Numix-Cursor";
-    };
-in
 {
+    colors,
+    ...
+}: {
   programs.waybar.style = ''
 * {
     border: none;
     border-radius: 0px;
-    font-family: ${custom.font};
+    font-family: "RobotoMono Nerd Font";
     font-size: 14px;
     min-height: 0;
 }
 
 #window {
-    background: ${custom.tertiary_background_color};
+    background: #${colors.blue_dark_muted};
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 16px;
@@ -36,14 +23,14 @@ in
 }
 
 window#waybar {
-    background: ${custom.primary_background_color};
+    background: #${colors.black};
 }
 
 #cava.left, #cava.right {
-    background: ${custom.tertiary_background_color};
+    background: #${colors.blue_dark_muted};
     margin: 5px;
     padding: 8px 16px;
-    color: ${custom.primary_accent};
+    color: #${colors.primary_accent};
 }
 
 #cava.left {
@@ -55,11 +42,11 @@ window#waybar {
 }
 
 #workspaces {
-    background: ${custom.tertiary_background_color};
+    background: #${colors.blue_dark_muted};
     margin: 5px 5px;
     padding: 8px 5px;
     border-radius: 16px;
-    color: ${custom.primary_accent};
+    color: #${colors.primary_accent};
 }
 
 #workspaces button {
@@ -67,13 +54,13 @@ window#waybar {
     margin: 0px 3px;
     border-radius: 16px;
     color: transparent;
-    background: ${custom.primary_background_color};
+    background: #${colors.black};
     transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
-    background-color: ${custom.secondary_accent};
-    color: ${custom.background};
+    background-color: #${colors.secondary_accent};
+    color: #${colors.black};
     border-radius: 16px;
     min-width: 50px;
     background-size: 400% 400%;
@@ -81,8 +68,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background-color: ${custom.tertiary_accent};
-    color: ${custom.background};
+    background-color: #${colors.primary_accent};
+    color: #${colors.black};
     border-radius: 16px;
     min-width: 50px;
     background-size: 400% 400%;
@@ -96,7 +83,7 @@ window#waybar {
 #custom-playerctl.back,
 #custom-playerctl.play,
 #custom-playerctl.next {
-    background: ${custom.tertiary_background_color};
+    background: #${colors.blue_dark_muted};
     font-weight: bold;
     margin: 5px 0px;
 }
@@ -106,7 +93,7 @@ window#waybar {
 #bluetooth,
 #battery,
 #hardware {
-    color: ${custom.tertiary_accent};
+    color: #${colors.white};
     border-radius: 10px 24px 10px 24px;
     padding: 0px 20px;
     margin-left: 7px;
@@ -128,16 +115,16 @@ window#waybar {
 #custom-playerctl.back:hover,
 #custom-playerctl.play:hover,
 #custom-playerctl.next:hover {
-    color: ${custom.tertiary_accent};
+    color: #${colors.white};
 }
 
 #custom-playerctl.back,
 #custom-playerctl.next {
-    color: ${custom.primary_accent};
+    color: #${colors.primary_accent};
 }
 
 #custom-playerctl.play {
-    color: ${custom.secondary_accent};
+    color: #${colors.secondary_accent};
     padding: 0px 5px;
 }
 
@@ -155,8 +142,8 @@ window#waybar {
 
 #custom-player,
 #pulseaudio {
-    background: ${custom.tertiary_background_color};
-    color: ${custom.tertiary_accent};
+    background: #${colors.blue_dark_muted};
+    color: #${colors.white};
     padding: 0 20px;
     border-radius: 24px 10px 24px 10px;
     margin: 5px 0;
@@ -164,8 +151,8 @@ window#waybar {
 }
 
 #user {
-    color: ${custom.tertiary_accent};
-    background: ${custom.tertiary_background_color};
+    color: #${colors.tertiary_accent};
+    background: #${colors.blue_dark_muted};
     border-radius: 0px 0px 40px 0px;
     padding: 10px 25px 15px 10px;
     margin-right: 7px;
@@ -174,8 +161,8 @@ window#waybar {
 }
 
 #clock {
-    color: ${custom.tertiary_accent};
-    background: ${custom.tertiary_background_color};
+    color: #${colors.tertiary_accent};
+    background: #${colors.blue_dark_muted};
     border-radius: 0px 0px 0px 40px;
     padding: 10px 10px 15px 25px;
     margin-left: 7px;

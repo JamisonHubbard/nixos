@@ -1,12 +1,13 @@
 {
+    colors,
     pkgs,
     ...
 }: {
     imports = [
-        ./home/alacritty.nix
         ./home/git.nix
         ./home/hyprland
-        ./home/waybar
+        (import ./home/alacritty.nix {inherit colors;})
+        (import ./home/waybar {inherit colors;})
     ];
 
     # user info

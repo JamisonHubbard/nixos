@@ -1,4 +1,7 @@
-{ ... }: {
+{
+    colors,
+    ...
+}: {
     programs.starship = {
         enable = true;
         settings = {
@@ -7,26 +10,26 @@
 
             username = {
                 show_always = true;
-                style_user = "bold #89b4fa";
+                style_user = "bold #${colors.primary_accent}";
                 format = "[$user]($style) ";
             };
 
             git_branch = {
                 format = "[$branch(:$remote_branch)]($style) ";
-                style = "bold #af89fa";
+                style = "bold #${colors.tertiary_accent}";
             };
 
             git_metrics = {
                 disabled = false;
                 format = "[+$added]($added_style)/[-$deleted]($deleted_style) ";
-                added_style = "bold #8be8ad";
-                deleted_style = "bold #eb7267";
+                added_style = "bold #${colors.green}";
+                deleted_style = "bold #${colors.red_light}";
                 only_nonzero_diffs = false;
             };
 
             directory = {
                 format = "[$path]($style)[$read_only]($read_only_style) ";
-                style = "bold #8be8ad";
+                style = "bold #${colors.secondary_accent}";
             };
         };
     };
