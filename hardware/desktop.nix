@@ -22,11 +22,13 @@
     ];
     boot.extraModulePackages = [];
 
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "nodev";
-    boot.loader.grub.useOSProber = true;
-    boot.loader.grub.efiSupport = true;
-    boot.loader.systemd-boot.enable = false;
+    boot.loader.grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        useOSProber = true;
+    };
+    boot.loader.efi.canTouchEfiVariables = true;
 
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia.modesetting.enable = true;
