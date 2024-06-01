@@ -13,7 +13,7 @@
             # startup (custom)
             "exec-once" = [
                 "swww init"
-                "swww img /home/jamison/wallpapers/current"
+                "swww img /home/jamison/nixos/wallpapers/current"
                 "nm-applet --indicator"
                 "dunst"
                 "/home/jamison/nixos/home/waybar/start.sh"
