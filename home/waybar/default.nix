@@ -1,9 +1,12 @@
 {
-    colors,
+    theme,
     ...
-}: {
+}: 
+let
+    colors = import ../../themes/${theme}/colors.nix;
+in {
     imports = [
-        (import ./style.nix {inherit colors;})
+        (import ./style.nix {inherit theme;})
     ];
 
     nixpkgs.overlays = [

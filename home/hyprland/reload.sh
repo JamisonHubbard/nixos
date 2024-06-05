@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 
-killall swww-daemon
 swww init
-swww img /home/jamison/nixos/wallpapers/current
+swww img /home/jamison/nixos/themes/current/image &
 
 killall .nm-applet-wrapped
-nm-applet --indicator
+nm-applet --indicator &
 
 killall .dunst-wrapped
-dunst
+dunst &
 
 killall .waybar-wrapped
 waybar &

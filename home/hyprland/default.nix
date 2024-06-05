@@ -8,7 +8,10 @@
         settings = {
             # monitors
             # see https://wiki.hyprland.org/Configuring/Monitors/
-            monitor = ",preferred,auto,auto";
+            monitor = [
+                ",preferred,auto,auto"
+                "Unknown-1,disable"
+            ];
 
             # startup (custom)
             "exec-once" = [
@@ -58,7 +61,7 @@
                 # change transparency of focused and unfocused windows
                 fullscreen_opacity = 1.0;
                 active_opacity = 1.0;
-                inactive_opacity = 0.95;
+                inactive_opacity = 1.0;
 
                 drop_shadow = true;
                 shadow_range = 4;

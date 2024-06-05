@@ -1,18 +1,23 @@
 {
-    colors,
+    theme,
     pkgs,
     ...
 }: {
     imports = [
         ./home/git.nix
         ./home/hyprland
-        (import ./home/alacritty.nix {inherit colors;})
-        (import ./home/waybar {inherit colors;})
+        (import ./home/alacritty.nix {inherit theme;})
+        (import ./home/waybar {inherit theme;})
     ];
 
     # user info
     home.username = "jamison";
     home.homeDirectory = "/home/jamison";
+
+    # create theme symlink
+    home.file = {
+        "/home/jamison/nixos/themes/current".source = ./themes/${theme};
+    };
 
     # user packages
     home.packages = [

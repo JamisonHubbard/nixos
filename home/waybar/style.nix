@@ -1,7 +1,10 @@
 {
-    colors,
+    theme,
     ...
-}: {
+}:
+let
+    colors = import ../../themes/${theme}/colors.nix;
+in {
   programs.waybar.style = ''
 * {
     border: none;
@@ -16,14 +19,13 @@
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
     font-weight: normal;
     font-style: normal;
 }
 
 window#waybar {
     background: #${colors.black};
+    opacity: 0.8;
 }
 
 #cava.left, #cava.right {
@@ -75,28 +77,51 @@ window#waybar {
     background-size: 400% 400%;
 }
 
-#tray,
-#network,
-#bluetooth,
 #battery,
+#bluetooth,
+#network,
 #hardware,
+#tray,
+#clock,
+#pulseaudio,
+#custom-player,
 #custom-playerctl.back,
 #custom-playerctl.play,
-#custom-playerctl.next {
+#custom-playerctl.next,
+#user {
     background: #${colors.blue_dark_muted};
     font-weight: bold;
     margin: 5px 0px;
 }
 
-#tray,
-#network,
-#bluetooth,
 #battery,
-#hardware {
-    color: #${colors.white};
-    border-radius: 10px 24px 10px 24px;
+#bluetooth,
+#network,
+#hardware,
+#tray,
+#clock,
+#pulseaudio,
+#custom-player,
+#user {
     padding: 0px 20px;
+    color: #${colors.grey_light};
+}
+
+#battery,
+#bluetooth,
+#network,
+#hardware,
+#tray,
+#clock {
+    border-radius: 10px 24px 10px 24px;
     margin-left: 7px;
+}
+
+#pulseaudio,
+#custom-player,
+#user {
+    border-radius: 24px 10px 24px 10px;
+    margin-right: 7px;
 }
 
 #cpu,
@@ -115,7 +140,7 @@ window#waybar {
 #custom-playerctl.back:hover,
 #custom-playerctl.play:hover,
 #custom-playerctl.next:hover {
-    color: #${colors.white};
+    color: #${colors.grey_light};
 }
 
 #custom-playerctl.back,
@@ -130,7 +155,7 @@ window#waybar {
 
 #custom-playerctl.back {
     border-radius: 24px 0px 0px 10px;
-    padding-left: 16px;
+    padding-left: 12px;
     margin-left: 7px;
 }
 
@@ -140,22 +165,13 @@ window#waybar {
     margin-right: 7px;
 }
 
-#custom-player,
-#pulseaudio {
-    background: #${colors.blue_dark_muted};
-    color: #${colors.white};
-    padding: 0 20px;
-    border-radius: 24px 10px 24px 10px;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
 #user {
     color: #${colors.tertiary_accent};
     background: #${colors.blue_dark_muted};
     border-radius: 0px 0px 40px 0px;
     padding: 10px 25px 15px 10px;
     margin-right: 7px;
+    margin-top: 0px;
     font-weight: bold;
     font-size: 14px;
 }
@@ -166,6 +182,7 @@ window#waybar {
     border-radius: 0px 0px 0px 40px;
     padding: 10px 10px 15px 25px;
     margin-left: 7px;
+    margin-top: 0px;
     font-weight: bold;
     font-size: 14px;
 }

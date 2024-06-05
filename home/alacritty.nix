@@ -1,7 +1,10 @@
 {
-    colors,
+    theme,
     ...
-}: {
+}: 
+let
+    colors = import ../themes/${theme}/colors.nix;
+in {
     programs.alacritty = {
         enable = true;
         settings = {
