@@ -21,31 +21,32 @@ in {
     ];
 
     environment.systemPackages = with pkgs; [
-        # utils
-        feh
-        gcc
-        git
+        # system utils
+        blueman
         home-manager
         htop
         killall
-        lazygit
         memtester
-        neofetch
         openssh
         p7zip
-        playerctl
         ripgrep
-        steam-run
         unrar
         unzip
-        vlc
         wget
         zip
 
-        # terminals/editors/filesystem navigators
+        # development
+        devenv
+        gcc
+        git
+        lazygit
+
+        # terminal
         alacritty
         cava
         dolphin
+        feh
+        neofetch
         obsidian
         vim
 
@@ -53,9 +54,7 @@ in {
         discord
         firefox
         spotify
-
-        # bluetooth
-        blueman
+        vlc
 
         # app launcher
         rofi-wayland
@@ -74,10 +73,12 @@ in {
         ckan
         mangohud
         protonup
+        steam-run
 
         # bar
-        waybar
         networkmanagerapplet
+        playerctl
+        waybar
     ];
 
     # allow proprietary software
