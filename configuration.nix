@@ -53,6 +53,7 @@ in {
         # apps
         discord
         spotify
+        qbittorrent
         vlc
 
         # app launcher
