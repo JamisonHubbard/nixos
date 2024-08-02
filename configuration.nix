@@ -89,6 +89,7 @@ in {
         la = "ls -al";
         gs = "git status";
         gb = "git branch";
+        cat = "bat";
     };
 
     # keyboard shortcuts / media controls
