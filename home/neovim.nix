@@ -49,7 +49,18 @@ in {
 	    enable = true;
 	    vimAlias = true;
       defaultEditor = true;
+
       withNodeJs = true;
+      withPython3 = true;
+      extraPython3Packages = (ps: with ps; [
+          pynvim
+      ]);
+
+      extraPackages = [
+          # these packages are provided so the plugins work
+          pkgs.go
+          pkgs.python3Full
+      ];
 
 	    plugins = [
             treesitterWithGrammars

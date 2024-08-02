@@ -4,6 +4,7 @@
     ...
 }: {
     imports = [
+        ./home/bash.nix
         ./home/git.nix
         ./home/neovim.nix
         ./home/hyprland
