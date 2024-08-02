@@ -97,7 +97,6 @@ in {
         enable = true;
         bindings = [];
     };
-    sound.mediaKeys.enable = true;
 
     # steam config
     programs.steam = {
