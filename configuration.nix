@@ -140,7 +140,7 @@ in {
             DontCheckDefaultBrowser = true;
             DisplayBookmarksToolbar = "always";
             DisplayMenuBar = "default-off";
-            SearchBar = "unified"ensiieieienienii;
+            SearchBar = "unified";
         };
     };
 
