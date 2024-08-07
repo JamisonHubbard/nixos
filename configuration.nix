@@ -50,6 +50,9 @@ in {
         obsidian
         vim
 
+        # neovim plugins
+        markdown-oxide
+
         # apps
         discord
         spotify
@@ -98,7 +101,6 @@ in {
         enable = true;
         bindings = [];
     };
-    sound.mediaKeys.enable = true;
 
     # steam config
     programs.steam = {
@@ -120,11 +122,26 @@ in {
         };
     };
 
-    # firefox config
     programs.firefox = {
         enable = true;
         policies = {
+            DisableFirefoxStudies = true;
+            EnableTrackingProtection = {
+                Value = true;
+                Locked = true;
+                Cryptomining = true;
+                Fingerprinting = true;
+            };
+            DisablePocket = true;
+            DisableFirefoxAccounts = true;
+            DisableAccounts = true;
+            DisableFirefoxScreenshots = true;
+            OverrideFirstRunPage = "";
+            OverridePostUpdatePage = "";
             DontCheckDefaultBrowser = true;
+            DisplayBookmarksToolbar = "always";
+            DisplayMenuBar = "default-off";
+            SearchBar = "unified";
         };
     };
 

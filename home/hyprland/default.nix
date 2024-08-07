@@ -100,7 +100,7 @@
 
             # see https://wiki.hypland.org/Configuring/Master-Layout/
             master = {
-                new_is_master = true;
+              new_status = "master";
             };
 
             # see https://wiki.hypland.org/Configuring/Variables/#misc

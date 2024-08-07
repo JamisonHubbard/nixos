@@ -1,11 +1,13 @@
 {
-    theme,
     pkgs,
+    theme,
     ...
 }: {
     imports = [
+        ./home/bash.nix
         ./home/git.nix
         ./home/hyprland
+        ./home/neovim.nix
         (import ./home/alacritty.nix {inherit theme;})
         (import ./home/waybar {inherit theme;})
     ];
@@ -26,7 +28,6 @@
         pkgs.btop
 
         # terminals/editors
-        pkgs.neovim
         pkgs.starship
 
         # fonts
