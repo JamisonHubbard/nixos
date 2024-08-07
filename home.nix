@@ -5,9 +5,10 @@
 }: {
     imports = [
         ./home/bash.nix
+        ./home/firefox.nix
         ./home/git.nix
-        ./home/neovim.nix
         ./home/hyprland
+        ./home/neovim.nix
         (import ./home/alacritty.nix {inherit theme;})
         (import ./home/waybar {inherit theme;})
     ];

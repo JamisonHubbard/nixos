@@ -50,6 +50,9 @@ in {
         obsidian
         vim
 
+        # neovim plugins
+        markdown-oxide
+
         # apps
         discord
         spotify
@@ -115,14 +118,6 @@ in {
         };
         users = {
             ${username} = import ./home.nix;
-        };
-    };
-
-    # firefox config
-    programs.firefox = {
-        enable = true;
-        policies = {
-            DontCheckDefaultBrowser = true;
         };
     };
 
