@@ -121,6 +121,29 @@ in {
         };
     };
 
+    programs.firefox = {
+        enable = true;
+        policies = {
+            DisableFirefoxStudies = true;
+            EnableTrackingProtection = {
+                Value = true;
+                Locked = true;
+                Cryptomining = true;
+                Fingerprinting = true;
+            };
+            DisablePocket = true;
+            DisableFirefoxAccounts = true;
+            DisableAccounts = true;
+            DisableFirefoxScreenshots = true;
+            OverrideFirstRunPage = "";
+            OverridePostUpdatePage = "";
+            DontCheckDefaultBrowser = true;
+            DisplayBookmarksToolbar = "always";
+            DisplayMenuBar = "default-off";
+            SearchBar = "unified"ensiieieienienii;
+        };
+    };
+
     # time zone
     time.timeZone = "America/${city}";
 

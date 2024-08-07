@@ -5,7 +5,6 @@
 }: {
     imports = [
         ./home/bash.nix
-        ./home/firefox.nix
         ./home/git.nix
         ./home/hyprland
         ./home/neovim.nix
