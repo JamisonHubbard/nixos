@@ -12,6 +12,7 @@ in {
         ./system/audio.nix
         ./system/bluetooth.nix
         ./system/hyprland.nix
+        ./system/vpn.nix
         (import ./system/networking.nix {inherit username;})
         (import ./system/starship.nix {inherit theme;})
         (import ./system/users.nix {inherit username;})
