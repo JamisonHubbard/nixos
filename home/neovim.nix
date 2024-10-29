@@ -48,23 +48,23 @@ in {
 	programs.neovim = {
 	    enable = true;
 	    vimAlias = true;
-      defaultEditor = true;
+        defaultEditor = true;
 
-      withNodeJs = true;
-      withPython3 = true;
-      extraPython3Packages = (ps: with ps; [
-          pynvim
-      ]);
+        withNodeJs = true;
+        withPython3 = true;
+        extraPython3Packages = (ps: with ps; [
+            pynvim
+        ]);
 
-      extraPackages = [
-          # these packages are provided so the plugins work
-          pkgs.go
-          pkgs.python3Full
-      ];
+        extraPackages = [
+            # these packages are provided so the plugins work
+            pkgs.go
+            pkgs.python3Full
+        ];
 
-	    plugins = [
-            treesitterWithGrammars
-	    ];
+            plugins = [
+                treesitterWithGrammars
+            ];
 	};
 
 	home.file."./.config/nvim/lua/parsers.lua".text = ''

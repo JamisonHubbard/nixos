@@ -26,18 +26,16 @@ in {
         home-manager
         htop
         killall
-        memtester
         openssh
-        p7zip
         ripgrep
-        unrar
         unzip
         wget
         zip
+        # memtester
+        # p7zip
+        # unrar
 
         # development
-        devenv
-        gcc
         git
         lazygit
 
@@ -47,7 +45,6 @@ in {
         dolphin
         feh
         neofetch
-        obsidian
         vim
 
         # neovim plugins
@@ -55,8 +52,8 @@ in {
 
         # apps
         discord
+        obsidian
         spotify
-        qbittorrent
         vlc
 
         # app launcher
