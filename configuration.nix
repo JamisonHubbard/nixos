@@ -142,6 +142,10 @@ in {
         };
     };
 
+    # virtualisation
+    virtualisation.libvirtd.enable = true;
+    programs.virt-manager.enable = true;
+
     # time zone
     time.timeZone = "America/${city}";
 

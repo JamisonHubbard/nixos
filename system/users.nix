@@ -9,6 +9,7 @@
             "audio"
             "disk"
             "input"
+            "libvirtd"
             "networkmanager"
             "storage"
             "video"
