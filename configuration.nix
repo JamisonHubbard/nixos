@@ -51,6 +51,7 @@ in {
         markdown-oxide
 
         # apps
+        google-chrome
         discord
         obsidian
         spotify
