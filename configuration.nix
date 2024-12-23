@@ -28,6 +28,7 @@ in {
         home-manager
         htop
         killall
+        ntfs3g
         openssh
         ripgrep
         unzip
