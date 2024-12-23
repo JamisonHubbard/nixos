@@ -23,6 +23,8 @@ in {
     environment.systemPackages = with pkgs; [
         # system utils
         blueman
+        ffmpeg
+        ffmpegthumbnailer
         home-manager
         htop
         killall
@@ -40,11 +42,11 @@ in {
         lazygit
 
         # terminal
-        alacritty
         cava
-        dolphin
         feh
+        kitty
         neofetch
+        ranger
         vim
 
         # neovim plugins

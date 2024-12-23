@@ -23,9 +23,9 @@
             ];
 
             # my programs
-            # see https://wiki.hypland.org/Configuring/Keywords/
-            "$terminal" = "alacritty";
-            "$fileManager" = "dolphin";
+            # see https://wiki.hyprland.org/Configuring/Keywords/
+            "$terminal" = "kitty";
+            "$fileManager" = "kitty ranger";
             "$menu" = "rofi -show drun -show-icons";
             "$bar" = "/home/jamison/nixos/home/hyprland/reload.sh";
 

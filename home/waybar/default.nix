@@ -173,7 +173,7 @@ in {
             # cpu percentage - hardware group
             cpu = {
                 format = "  {usage}%";
-                "on-click" = "alacritty -e htop";
+                "on-click" = "kitty htop";
             };
 
             # cpu temperature - hardware group
@@ -185,7 +185,7 @@ in {
             # ram usage - hardware group
             memory = {
                 format = "/   {}% ";
-                "on-click" = "alacritty -e htop";
+                "on-click" = "kitty htop";
             };
 
             # disk usage - hardware group
@@ -193,7 +193,7 @@ in {
                 interval = 30;
                 format = "/   {percentage_used}% ";
                 path = "/";
-                "on-click" = "alacritty -e htop";
+                "on-click" = "kitty htop";
             };
 
             # hardware group
