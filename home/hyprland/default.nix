@@ -26,7 +26,7 @@
             # see https://wiki.hyprland.org/Configuring/Keywords/
             "$terminal" = "kitty";
             "$fileManager" = "kitty ranger";
-            "$menu" = "rofi -show drun -show-icons";
+            "$menu" = "rofi -show drun -show-icons -theme material";
             "$bar" = "/home/jamison/nixos/home/hyprland/reload.sh";
 
             # environment variables
@@ -144,11 +144,12 @@
 
             bind = [
                 "$mod, Q, exec, $terminal"
+                "$mod, F, exec, $fileManager"
+                "$mod, D, exec, $menu"
+                "$mod, R, exec, $bar"
                 "$mod, C, killactive,"
                 "$mod, M, exit,"
                 "$mod, V, togglefloating,"
-                "$mod, D, exec, $menu"
-                "$mod, R, exec, $bar"
                 "$mod, P, pseudo,"
                 "$mod, J, togglesplit,"
 
