@@ -8,7 +8,8 @@
         ./home/git.nix
         ./home/hyprland
         ./home/neovim.nix
-        (import ./home/alacritty.nix {inherit theme;})
+        ./home/ranger
+        (import ./home/kitty.nix {inherit theme;})
         (import ./home/waybar {inherit theme;})
     ];
 
