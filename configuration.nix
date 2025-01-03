@@ -25,6 +25,7 @@ in {
         blueman
         ffmpeg
         ffmpegthumbnailer
+        gcc
         home-manager
         htop
         killall
