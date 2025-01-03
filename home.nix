@@ -32,7 +32,9 @@
         pkgs.starship
 
         # fonts
-        pkgs.nerdfonts
+        pkgs.nerd-fonts.fira-code
+        pkgs.nerd-fonts.fira-mono
+        pkgs.nerd-fonts.roboto-mono
     ];
 
     # env variables

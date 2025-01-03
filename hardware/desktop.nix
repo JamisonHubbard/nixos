@@ -37,6 +37,7 @@
         amdgpuBusId = "PCI:0:0:0";
         nvidiaBusId = "PCI:1:0:0";
     };
+    hardware.nvidia.open = false;
 
     fileSystems."/" = {
         device = "/dev/disk/by-uuid/764e403a-3e87-4b18-9cb2-a04933a97d58";
