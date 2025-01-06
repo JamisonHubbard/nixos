@@ -1,5 +1,6 @@
 {
     inputs,
+    system,
     pkgs,
     ...
 }:
@@ -119,6 +120,7 @@ in {
         extraSpecialArgs = {
             inherit inputs;
             inherit theme;
+            inherit system;
         };
         users = {
             ${username} = import ./home.nix;
