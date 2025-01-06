@@ -10,6 +10,8 @@
         };
 
         hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
+        hyprland-qtutils.url = "github:hyprwm/hyprland-qtutils";
     };
 
     outputs = {
@@ -17,6 +19,7 @@
         nixpkgs,
         home-manager,
         hyprland,
+        hyprland-qtutils,
         ...
     }@inputs:
         let

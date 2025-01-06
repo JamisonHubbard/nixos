@@ -1,4 +1,6 @@
 {
+    inputs,
+    system,
     pkgs,
     theme,
     ...
@@ -35,6 +37,9 @@
         pkgs.nerd-fonts.fira-code
         pkgs.nerd-fonts.fira-mono
         pkgs.nerd-fonts.roboto-mono
+
+        # hyprland utils
+        inputs.hyprland-qtutils.packages.${system}.default
     ];
 
     # env variables
