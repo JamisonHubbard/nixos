@@ -26,6 +26,7 @@ in {
         blueman
         ffmpeg
         ffmpegthumbnailer
+        fzf
         gcc
         home-manager
         htop
